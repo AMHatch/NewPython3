@@ -8,9 +8,9 @@
 # list2 = [2,3,6]
 # list3 = []
 # index = 0
-# while index < len(list1):
-#     list3.append(list1[index] * list2[index])
-#     index+=1
+# while index < len(list1):                          #While index is less than the length of the list, multipy list1[index] by list2[index]
+#     list3.append(list1[index] * list2[index])      #multipy list1[index] by list2[index]
+#     index+=1                                       # increment index up one
 # print(list3) 
 
 # #2 2. Matrix Addition
@@ -36,25 +36,25 @@
 # matrix1 = [[1,3],[2,4]]
 # matrix2 = [[5,2],[1,0]]
 # final_matrix=[]
-# index = 0
-# while index < len(matrix1):
-#     matrix3 = []
-#     index1 = 0
-#     while index1 < len(matrix1):
-#         matrix3.append(matrix1[index][index1] + matrix2[index][index1])
-#         index1+=1
-#     index += 1
-#     final_matrix.append(matrix3)
-# print(final_matrix) 
+# index0 = 0
+# while index0 < len(matrix1):                                                 #While index is less than the length of matrix1,
+#     matrix3 = []                                                            # really should be called a list, since we're using it to add to another list to create a matrix
+#     index1 = 0                                                              
+#     while index1 < len(matrix1):                                            #While index1 is less than the length of matrix1,
+#         matrix3.append(matrix1[index0][index1] + matrix2[index0][index1])     # we're adding the value of matrix1[0,0](in this case '1') to the value of matrix2[0,0](5) and appending it to list matrix3
+#         index1+=1                                                           # incrementing the value of index1 by 1 so the next loop does matrix1[0,1]+matrix2[0,1]
+#     index0 += 1                                         # incrementing the value of index0 by 1 so the next loop does matrix1[1,0]+matrix2[1,0] and matrix1[1,1]+matrix2[1,1]
+#     final_matrix.append(matrix3)                        # appending the results of the inner while loop to final_matrix, will look like:
+# print(final_matrix)                                                 # [[loop one,increment index1 for loop two],[loop three after incrementing index0,increment index1 for loop 4]]
 
-#3. se your solution in Matrix Addition, 
+#3. use your solution in Matrix Addition, 
 # and extend it to work for a pair of matrices of any size,
 #  as long as they have the same size.
 # [[1,5,4],[2,3,6],[4,8,9]]
 # [[2,9,3],[4,8,1],[5,7,6]]
 
 
-# tried it with a while loop. having trouble getting it to work. see fo loop below.  
+# tried it with a while loop. having trouble getting it to work. see for loop below.  
 
 #                                                               <<<<<REVISIT>>>>>>>
 
@@ -81,27 +81,24 @@
 #     index +=1
 # print(final_matrix) 
 
-# This one works!!!!                              <<<<<<REVISIT>>>>>>>
+#                    >>>>>>Definately need clarification on this<<<<<<<<<<    
 # matx1 = [[1,5,4],[2,3,6],[4,8,9]]
 # matx2 = [[2,9,3],[4,8,1],[5,7,6]]
 
 # final_matx = []
 
-# for indexA in range(len(matx1)):
-#     matx3 = []
-#     for indexB in range(len(matx1)):
-#         inner_matx = 0
-#         for indexC in range(len(matx1)):
-#             matx1_index = matx1[indexC]
-#             matx2_index = matx2[indexB]
-#             inner_matx += matx1_index[indexB] * matx2_index[indexC]
+# for indexA in range(len(matx1)):                                # for indexA in the range of the lenght of matx1 so :(0,1,2)
+#     matx3 = []                                                  # like above, really should be a list since its being wiped after 3 indices
+#     for indexB in range(len(matx1)):                            # for indexb in the range of the lenght of matx1 so :(0,1,2)
+#         inner_matx = 0                                          #values being saved to be appended to matx3
+#         for indexC in range(len(matx1)):                        # for indexc in the range of the lenght of matx1 so :(0,1,2)
+#             matx1_index = matx1[indexC]                         # matx1_index is the mutable indexA of matx1 being saved to be used in equation.|  
+#             matx2_index = matx2[indexB]                         # matx2_index is the mutable indexB of matx2 being saved to be used in equation.|     
+#             inner_matx += matx1_index[indexB] + matx2_index[indexC]           
 #         matx3.append(inner_matx)
 #     final_matx.append(matx3)
 
 # print(final_matx)
-
-
-
 
 #4
 # Given a list of numbers or strings, create a new list containing the same elements as the first list,
@@ -120,17 +117,17 @@
 # number_list = ['4','3','6','1','0','5','7']
 
 # for i in my_list:
-#     # print(i)  # i is then letter in the input
+#     # print(i)                                         # i is then letter in the input
 #     if i in letter_list:
 #         i_of_letter = letter_list.index(i)
-#         # print(i_of_letter)  # i_of _letter is the index of the letters in letter_list that match between the 
+#         # print(i_of_letter)                           # i_of _letter is the index of the letters in letter_list that match between the 
 #         # input list and letter list
 #         value = number_list[i_of_letter]
-#         # print(value) # value of the index in number list given from letter list.
+#         # print(value)                                 # value of the index in number list given from letter list.
 #         orig_index = my_list.index(i)
-#         # print(orig_index) # index of the orignial list (my list) that needs to be replaced with the value from number list.
+#         # print(orig_index)                            # index of the orignial list (my list) that needs to be replaced with the value from number list.
 #         my_list[orig_index] = number_list[i_of_letter]
-#         # print(my_list[orig_index])  # this is the value of the orignial list that has been replaced by the numbers from number list. 
+#         # print(my_list[orig_index])                   # this is the value of the orignial list that has been replaced by the numbers from number list. 
 # result =' '.join(my_list)
 # print(result)
 

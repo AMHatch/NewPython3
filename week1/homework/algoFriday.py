@@ -15,6 +15,7 @@ for i in range(len(array) -1) : # for index in the array not exceeding the lengt
             zeros.append(left)
             zeros.append(right)
             answer.append(zeros)
+            ir-=1
             il+=1                     # move process to the integer in the next index to the right of current
         elif ce + left + right > 0:   # if sum is greater than zero,
             ir-=1                     # move process to the integer in the next index to the left of current

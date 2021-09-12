@@ -33,8 +33,8 @@
 # 6 5
 # 3 4
 
-# matrix1 = [[1,3],[2,4]]
-# matrix2 = [[5,2],[1,0]]
+# matrix1 = [[1,3],[2,4],]
+# matrix2 = [[5,2],[1,0],]
 # final_matrix=[]
 # index0 = 0
 # while index0 < len(matrix1):                                                 #While index is less than the length of matrix1,
@@ -128,7 +128,7 @@
 #         # print(orig_index)                            # index of the orignial list (my list) that needs to be replaced with the value from number list.
 #         my_list[orig_index] = number_list[i_of_letter]
 #         # print(my_list[orig_index])                   # this is the value of the orignial list that has been replaced by the numbers from number list. 
-# result =' '.join(my_list)
+# result =''.join(my_list)
 # print(result)
 
     #6 Given a word as a string, 

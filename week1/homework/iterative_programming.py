@@ -123,11 +123,9 @@
 #         # print(i_of_letter)                           # i_of _letter is the index of the letters in letter_list that match between the 
 #         # input list and letter list
 #         value = number_list[i_of_letter]
-#         # print(value)                                 # value of the index in number list given from letter list.
-#         orig_index = my_list.index(i)
-#         # print(orig_index)                            # index of the orignial list (my list) that needs to be replaced with the value from number list.
-#         my_list[orig_index] = number_list[i_of_letter]
-#         # print(my_list[orig_index])                   # this is the value of the orignial list that has been replaced by the numbers from number list. 
+#                                          # value of the index in number list given from letter list.
+#         orig_index = my_list.index(i) # index of the orignial list (my list) that needs to be replaced with the value from number list.
+#         my_list[orig_index] = number_list[i_of_letter]   # this is the value of the orignial list that has been replaced by the numbers from number list. 
 # result =''.join(my_list)
 # print(result)
 
@@ -157,7 +155,7 @@
 # for i in code:
 #     if i in alph:
 #         letter_index = alph.index(i)
-#         new_index = letter_index + 13
+#         new_index = letter_index + key
 #         decode = alph[new_index]
 #         result += decode
 #     else:

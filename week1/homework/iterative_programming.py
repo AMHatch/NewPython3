@@ -54,17 +54,17 @@
 # [[2,9,3],[4,8,1],[5,7,6]]
 
 
-matx1 = [[1,5,4],[2,3,6],[4,8,9]]
-matx2 = [[2,9,3],[4,8,1],[5,7,6]]
+# matx1 = [[1,5,4],[2,3,6],[4,8,9]]
+# matx2 = [[2,9,3],[4,8,1],[5,7,6]]
 
-final_matx = []
+# final_matx = []
 
-for outter in range(len(matx1)):
-    temp = []
-    for inner in range(len(matx1)):
-        element = matx1[outter][inner] + matx2[outter][inner]
-        temp.append(element)
-    final_matx.append(temp)
+# for outter in range(len(matx1)):
+#     temp = []
+#     for inner in range(len(matx1)):
+#         element = matx1[outter][inner] + matx2[outter][inner]
+#         temp.append(element)
+#     final_matx.append(temp)
 
 
 #4
@@ -83,17 +83,16 @@ for outter in range(len(matx1)):
 # letter_list = ['A','E','G','I','O','S','T']
 # number_list = ['4','3','6','1','0','5','7']
 
-# for i in my_list:                              
-#     if i in letter_list:
-#         i_of_letter = letter_list.index(i)               # i_of _letter is the index of the letters in letter_list that match between the                             
-#         value = number_list[i_of_letter]                 # value of the index in number list given from letter list.                              
-#         orig_index = my_list.index(i)                    # index of the orignial list (my list) that needs to be replaced with the value from number list.
-#         my_list[orig_index] = number_list[i_of_letter]   # this is the value of the orignial list that has been replaced by the numbers from number list. 
+# for letter in my_list:                              
+#     if letter in letter_list:
+#         index_of_letter = letter_list.index(letter)               # index_of _letter is the index of the letters in letter_list that match between the  
+#         orig_index = my_list.index(letter)                    # index of the orignial list (my list) that needs to be replaced with the value from number list.
+#         my_list[orig_index] = number_list[index_of_letter]   # this is the value of the orignial list that has been replaced by the numbers from number list. 
 # result =''.join(my_list)
 # print(result)
 
-    #6 Given a word as a string, 
-    # print the result of extending any long vowels to the length of 5.
+#6 Given a word as a string, 
+# print the result of extending any long vowels to the length of 5.
 
 # myInput = input("Give me a word with a long vowel : ")
 # vowels = ['ee', 'aa','ii','oo','uu','yy']

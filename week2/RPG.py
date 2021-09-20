@@ -34,7 +34,7 @@ class Character:
         print(f"{self.name} : adds {self.power_bonus} power, fits: {self.slot_type} ")    
 
     def print_status(self):
-        print(f"\n{self.name} has:\n{self.health} Health\n{self.armor} Armor\n{self.power} Power\n\n")
+        print(f"\n{self.name} has:\n{self.health} Health\n{self.armor} Armor\n{self.power} Power\n")
 
     def print_status_player(self):
         print(f"\n{self.name} has {self.health} health, {self.power} power, {self.armor} armor and {self.gold} gold.\n")
@@ -442,6 +442,8 @@ def combat():
         if enemy.alive():
             if raw_input != 'obiwan' or raw_input != '4':
                 enemy.attack(hero)
+            else: 
+                pass
 
     if not enemy.alive():
         hero.gold += enemy.gold
@@ -636,14 +638,20 @@ def black_market(hero):
                     hero.add_item_inv('Super Tonic')
                     hero.print_inventory()
 
-                if bm_choice == '2':
+                elif bm_choice == '2':
                     hero.add_item_inv('Potencey Pill')
                     hero.print_inventory()
 
-                if bm_choice =='3':
+                elif bm_choice =='3':
                     hero.add_item_inv('Draught of the Dragon')
                     hero.print_inventory()
+
+                elif bm_choice == '3':
+                    hero.add_item_inv('Dodge Bottle')
+                    hero.print_inventory()
+                    
         elif bm_input == '5':
+
             break
 
 
@@ -682,6 +690,8 @@ bm_items = ('''
 
 3. Draught of the Dragon
 
+4. Dodge Bottle
+
 ''')
 stories =[
 ''' 
@@ -704,11 +714,6 @@ stories =[
     custodian of the stolen plans that can save her people and restore freedom to the galaxy. . .
 ''',
 '''
-            
-            "I amar prestar sen: han mathon ne nen,
-            han mathon ne chae...a han noston ned
-            wilith."
-            
 
             The world is changed: I feel it in the
             water, I feel it in the earth, I smell it
@@ -1008,7 +1013,7 @@ def character_creation():
     char_input = input(char_create_menu)
     fighter = Fighter(name,20,10,100,10,[],0,0)
     medic = Medic(name,20,5,100,5,[],0,0)
-    shadow = Shadow(name,1,10,100,0,[],0,4)
+    shadow = Shadow(name,1,20,100,0,[],0,4)
     mage = Mage(name,20,10,100,5,[],0,0)
     bard = Bard(name,20,5,150,0,[],0,0)
     for char_input in char_input:
@@ -1052,4 +1057,3 @@ while True:
 
     else:
         print("Invaild Input")
-
